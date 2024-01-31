@@ -1,0 +1,21 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+</head>
+<header>
+{% include 'header/head.html' %}
+</header>
+<body>
+  {%for i in mov%}
+  <a href="{%url 'det' i.id%}"><p class="text1"> {{i.mname}}</p></a>
+  <img class="img1" src="{{i.movimg}}" alt="">
+ 
+  {%endfor%}
+</body>
+{% include 'footer/foot.html' %}
+</html>

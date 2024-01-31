@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+    {%include 'header/head.html'%}
+</header>
+<body>
+    <div class="container1">
+    <form method="post" action="{% url 'adcrev'%}"enctype="multipart/form-data">
+        <p class="text1">Critic Review</p>
+        {%csrf_token%}
+        {{form}}
+        <input class="text2" type="submit" value="Add">
+    
+    </form>   
+</div>
+</body>
+<footer>
+    {%include 'footer/foot.html'%}
+</footer>
+<style>
+    .text2{
+        position: relative;
+        top: 50px;
+    }
+    form{
+        display:flex;
+        flex-direction: column;
+        width: 500px;
+        
+        position: relative;
+        left: 30px;
+        top: 0px;
+        
+    }
+    .container1{
+        width: 600px;
+        height: 800px;
+       border: 1px solid black;
+       position: relative;
+       left: 500px;
+       top: 10px;
+       background-color: aqua;
+    }
+    footer{
+        position: relative;
+        top: 200px;
+    }
+    .text1{
+        position: relative;
+        top:10px;
+        left: 150px;
+        font-size: xx-large;
+}
+</style>
+</html>
